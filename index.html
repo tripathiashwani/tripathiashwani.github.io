@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ashwani Tripathi — SDE</title>
+<title>Ashwani Tripathi — Software Engineer</title>
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -31,7 +31,7 @@
   .hero-tag { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 24px; opacity: 0; animation: fadeUp 0.6s ease forwards 0.2s; }
   h1 { font-family: 'Syne', sans-serif; font-size: clamp(52px,8vw,110px); font-weight: 800; line-height: 0.95; letter-spacing: -3px; margin-bottom: 32px; opacity: 0; animation: fadeUp 0.7s ease forwards 0.4s; }
   h1 .line2 { color: var(--accent); }
-  .hero-desc { max-width: 520px; color: #888; font-size: 14px; margin-bottom: 48px; opacity: 0; animation: fadeUp 0.7s ease forwards 0.6s; }
+  .hero-desc { max-width: 560px; color: #888; font-size: 14px; margin-bottom: 48px; opacity: 0; animation: fadeUp 0.7s ease forwards 0.6s; }
   .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; opacity: 0; animation: fadeUp 0.7s ease forwards 0.8s; }
   .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 28px; font-family: 'DM Mono', monospace; font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; text-decoration: none; border: none; cursor: none; transition: all 0.2s; }
   .btn-primary { background: var(--accent); color: #000; }
@@ -53,16 +53,25 @@
   .stat-num { font-family: 'Syne', sans-serif; font-size: 38px; font-weight: 800; color: var(--accent); letter-spacing: -2px; line-height: 1; }
   .stat-label { color: var(--muted); font-size: 11px; letter-spacing: 2px; text-transform: uppercase; margin-top: 6px; }
 
+  /* ─── Experience ─── */
   .exp-list { display: flex; flex-direction: column; gap: 2px; }
   .exp-item { background: var(--card); border: 1px solid var(--border); padding: 36px 40px; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: start; transition: border-color 0.2s, transform 0.2s; }
   .exp-item:hover { border-color: var(--accent); transform: translateX(4px); }
   .exp-company { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 700; margin-bottom: 4px; }
-  .exp-role { color: var(--accent); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 12px; }
+  .exp-role { color: var(--accent); font-size: 12px; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 16px; }
   .exp-period { font-size: 12px; color: var(--muted); letter-spacing: 1px; text-align: right; white-space: nowrap; }
   .exp-desc { color: #888; font-size: 13px; }
+  .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 10px; color: #888; font-size: 13px; line-height: 1.75; }
+  .exp-bullets li { position: relative; padding-left: 20px; }
+  .exp-bullets li::before { content: ''; position: absolute; left: 0; top: 11px; width: 8px; height: 1px; background: var(--accent); }
+  .exp-bullets li strong { color: var(--fg); font-weight: 400; }
+  .exp-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+  .exp-tag { font-size: 11px; padding: 3px 10px; border: 1px solid var(--border); color: #777; }
+  .exp-tag.ai { border-color: #e8c54766; color: var(--accent); }
 
   .skills-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(280px,1fr)); gap: 2px; }
   .skill-group { background: var(--card); border: 1px solid var(--border); padding: 28px; }
+  .skill-group.featured { grid-column: 1 / -1; border-color: #e8c54740; }
   .skill-group-title { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; }
   .skill-tags { display: flex; flex-wrap: wrap; gap: 8px; }
   .skill-tag { font-size: 12px; padding: 5px 12px; border: 1px solid var(--border); color: #aaa; transition: all 0.2s; }
@@ -160,7 +169,8 @@
   .reveal.visible { opacity: 1; transform: translateY(0); }
 
   @media (max-width: 860px) { .dsa-platforms { grid-template-columns: 1fr; } .dsa-banner { flex-direction: column; align-items: flex-start; } }
-  @media (max-width: 768px) { nav { padding: 16px 24px; } .nav-links { display: none; } section { padding: 70px 24px; } #hero { padding: 100px 24px 60px; } #about .about-grid { grid-template-columns: 1fr; gap: 40px; } .exp-item { grid-template-columns: 1fr; } .exp-period { text-align: left; } #education .edu-card { flex-direction: column; align-items: flex-start; } footer { flex-direction: column; gap: 12px; text-align: center; } h1 { letter-spacing: -2px; } .p-count { font-size: 56px; } }
+  @media (max-width: 768px) { nav { padding: 16px 24px; } .nav-links { display: none; } section { padding: 70px 24px; } #hero { padding: 100px 24px 60px; } #about .about-grid { grid-template-columns: 1fr; gap: 40px; } .exp-item { grid-template-columns: 1fr; padding: 28px 24px; } .exp-period { text-align: left; } #education .edu-card { flex-direction: column; align-items: flex-start; } footer { flex-direction: column; gap: 12px; text-align: center; } h1 { letter-spacing: -2px; } .p-count { font-size: 56px; } }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } .hero-tag, h1, .hero-desc, .hero-actions, .hero-scroll, .reveal { opacity: 1; transform: none; } }
 </style>
 </head>
 <body>
@@ -183,9 +193,9 @@
 <!-- Hero -->
 <section id="hero">
   <div class="hero-bg-text">ASHWANI</div>
-  <div class="hero-tag">// SDE-I · Full-Stack Developer · India</div>
+  <div class="hero-tag">// Software Engineer · Full-Stack &amp; AI · India</div>
   <h1>Building<br><span class="line2">Scalable</span><br>Solutions.</h1>
-  <p class="hero-desc"> Software Engineer with expertise in Python, Django, React, Angular, and cloud-native tools. I design systems that scale - from REST APIs to distributed message queues.</p>
+  <p class="hero-desc">Software Engineer building scalable full-stack systems and agentic AI products with Python, FastAPI, Django, React, and cloud-native tools. From REST APIs and event streams to LLM agents that plan and act.</p>
   <div class="hero-actions">
     <a href="#projects" class="btn btn-primary">View Projects</a>
     <a href="#contact" class="btn btn-ghost">Get In Touch</a>
@@ -199,8 +209,8 @@
   <h2>Who I Am</h2>
   <div class="about-grid">
     <div class="about-text">
-      <p>I'm <strong>Ashwani Tripathi</strong>, a Software Engineer from India currently working as an <strong>SDE-I at Brickwin Technologies</strong>. My work sits at the intersection of frontend experiences and backend architecture — building things that are fast, reliable, and maintainable.</p><br>
-      <p>I've worked across the stack: Angular and React on the frontend, Django and Node.js on the backend, and tools like Docker, Kafka, and Redis to tie it all together. I enjoy solving complex problems with clean, purposeful code.</p><br>
+      <p>I'm <strong>Ashwani Tripathi</strong>, a Software Engineer from India currently working at <strong>CronLab Solutions</strong>, where I lead development of an internal analytics platform for <strong>Cisco</strong>. My work sits at the intersection of backend architecture, frontend experiences, and AI — building things that are fast, reliable, and maintainable.</p><br>
+      <p>I've worked across the stack: Angular and React on the frontend, Django and FastAPI on the backend, and tools like Docker, Kafka, Redis, and Celery to tie it all together. Lately I've been building <strong>agentic and generative AI</strong> features with LangGraph, RAG, and MCP.</p><br>
       <p>Currently deepening my knowledge in <strong>Golang</strong> and <strong>Kubernetes</strong> to build more cloud-native systems.</p>
     </div>
     <div class="about-stats">
@@ -217,22 +227,59 @@
   <div class="section-label">// 02 — Experience</div>
   <h2>Where I've<br>Worked</h2>
   <div class="exp-list reveal">
+
     <div class="exp-item">
       <div>
-        <div class="exp-company">Brickwin Technologies</div>
+        <div class="exp-company">CronLab Solutions</div>
         <div class="exp-role">Software Engineer</div>
-        <div class="exp-desc">Designing and building scalable full-stack features. Working across the frontend and backend to deliver performant, production-ready software.</div>
+        <ul class="exp-bullets">
+          <li>Leading development of an <strong>internal analytics dashboard for Cisco</strong>, architecting scalable microservices and system designs using Python, Django, FastAPI, Angular.js and React.js to enhance maintainability and extensibility.</li>
+          <li>Built <strong>agentic AI workflows</strong> using LangGraph, LangChain, and MCP-based tool integrations, enabling LLM agents to plan multi-step tasks, call internal APIs, and automate analytics querying and report generation.</li>
+          <li>Integrated <strong>generative AI features</strong> (OpenAI, Gemini) with RAG pipelines and vector search to deliver natural-language insights and contextual summaries over dashboard data, with prompt engineering and output guardrails for reliability.</li>
+          <li>Designed and deployed <strong>CI/CD pipelines using Jenkins</strong>, automating build, test, and deployment workflows and cutting release cycle time significantly.</li>
+          <li>Integrated <strong>Kafka</strong> for event-driven data streaming and <strong>AWS</strong> for scalable cloud infrastructure, processing <strong>10k+ events/day</strong> and reducing data processing latency by <strong>68%</strong>.</li>
+          <li>Leveraged <strong>Redis</strong> for caching and <strong>Celery</strong> for distributed task queues, increasing system throughput by <strong>40%</strong>.</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="exp-tag ai">LangGraph</span><span class="exp-tag ai">LangChain</span><span class="exp-tag ai">MCP</span><span class="exp-tag ai">RAG</span><span class="exp-tag ai">OpenAI</span><span class="exp-tag ai">Gemini</span>
+          <span class="exp-tag">Python</span><span class="exp-tag">Django</span><span class="exp-tag">FastAPI</span><span class="exp-tag">React.js</span><span class="exp-tag">Angular.js</span><span class="exp-tag">Kafka</span><span class="exp-tag">Redis</span><span class="exp-tag">Celery</span><span class="exp-tag">Jenkins</span><span class="exp-tag">AWS</span>
+        </div>
       </div>
-      <div class="exp-period">Oct 2025 — Present</div>
+      <div class="exp-period">May 2026 — Present</div>
     </div>
+
     <div class="exp-item">
       <div>
-        <div class="exp-company">DocExtract</div>
+        <div class="exp-company">Brickwin Consultancy Services</div>
         <div class="exp-role">SDE-I</div>
-        <div class="exp-desc">Contributed to document processing systems, building backend services and APIs to handle extraction workflows at scale.</div>
+        <ul class="exp-bullets">
+          <li>Built and shipped <strong>full-stack web applications</strong> using React.js, FastAPI, and Django, delivering <strong>20+ features/modules</strong> used by <strong>1500+ users</strong>.</li>
+          <li>Developed RESTful APIs with FastAPI and Django, <strong>reducing average API response time by 80%</strong> through query optimization and efficient serialization.</li>
+          <li>Designed responsive, reusable React.js components and integrated them with backend services, <strong>cutting frontend development time for new features by 35%</strong>.</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="exp-tag">React.js</span><span class="exp-tag">FastAPI</span><span class="exp-tag">Django</span><span class="exp-tag">REST APIs</span>
+        </div>
       </div>
-      <div class="exp-period">Jan 2025</div>
+      <div class="exp-period">Oct 2025 — May 2026</div>
     </div>
+
+    <div class="exp-item">
+      <div>
+        <div class="exp-company">Docextract</div>
+        <div class="exp-role">SDE-I</div>
+        <ul class="exp-bullets">
+          <li>Engineered scalable <strong>AI pipelines</strong> using LangChain, prompt engineering, and vector search, processing <strong>1000+ documents</strong> and improving semantic retrieval accuracy by <strong>30%</strong>.</li>
+          <li>Built a robust API layer capable of handling <strong>50+ concurrent users</strong>, and developed a dashboard using pandas, numpy, and plotly to visualize large-scale data in real time.</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="exp-tag ai">LangChain</span><span class="exp-tag ai">Vector Search</span>
+          <span class="exp-tag">Pandas</span><span class="exp-tag">NumPy</span><span class="exp-tag">Plotly</span>
+        </div>
+      </div>
+      <div class="exp-period">Jan 2025 — Oct 2025</div>
+    </div>
+
   </div>
 </section>
 
@@ -241,25 +288,30 @@
   <div class="section-label">// 03 — Skills</div>
   <h2>My Tech<br>Stack</h2>
   <div class="skills-grid reveal">
-    <div class="skill-group"><div class="skill-group-title">Frontend</div><div class="skill-tags"><span class="skill-tag">React.js</span><span class="skill-tag">Vue.js</span><span class="skill-tag">Tailwind</span><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">JavaScript</span></div></div>
-    <div class="skill-group"><div class="skill-group-title">Backend</div><div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">Django</span><span class="skill-tag">DRF</span><span class="skill-tag">FastAPI</span><span class="skill-tag">Node.js</span><span class="skill-tag">GraphQL</span></div></div>
-    <div class="skill-group"><div class="skill-group-title">Databases</div><div class="skill-tags"><span class="skill-tag">PostgreSQL</span><span class="skill-tag">MySQL</span><span class="skill-tag">MongoDB</span><span class="skill-tag">Redis</span></div></div>
-    <div class="skill-group"><div class="skill-group-title">DevOps & Tools</div><div class="skill-tags"><span class="skill-tag">Docker</span><span class="skill-tag">AWS</span><span class="skill-tag">Kafka</span><span class="skill-tag">RabbitMQ</span><span class="skill-tag">Jenkins</span><span class="skill-tag">Git</span><span class="skill-tag">Linux</span><span class="skill-tag">Postman</span></div></div>
-    <div class="skill-group"><div class="skill-group-title">Languages</div><div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">JavaScript</span><span class="skill-tag">C++</span><span class="skill-tag">C</span><span class="skill-tag">Golang ↗</span></div></div>
-    <div class="skill-group"><div class="skill-group-title">Data & ML</div><div class="skill-tags"><span class="skill-tag">Pandas</span><span class="skill-tag">Plotly</span></div></div>
-    <div class="skill-group">
-    <div class="skill-group-title">GenAI & Agentic AI</div>
-    <div class="skill-tags">
+    <div class="skill-group featured">
+      <div class="skill-group-title">Agentic &amp; Generative AI</div>
+      <div class="skill-tags">
         <span class="skill-tag">LangChain</span>
         <span class="skill-tag">LangGraph</span>
+        <span class="skill-tag">CrewAI</span>
+        <span class="skill-tag">AutoGen</span>
+        <span class="skill-tag">MCP (Model Context Protocol)</span>
+        <span class="skill-tag">OpenAI Agents SDK</span>
+        <span class="skill-tag">Tool / Function Calling</span>
+        <span class="skill-tag">RAG</span>
+        <span class="skill-tag">Prompt Engineering</span>
+        <span class="skill-tag">Vector Databases</span>
         <span class="skill-tag">OpenAI API</span>
         <span class="skill-tag">Google Gemini</span>
-        <span class="skill-tag">RAG</span>
-        <span class="skill-tag">Vector Databases</span>
-        <span class="skill-tag">MCP</span>
-        <span class="skill-tag">AI Agents</span>
+        <span class="skill-tag">Claude API</span>
+      </div>
     </div>
-</div>
+    <div class="skill-group"><div class="skill-group-title">Frontend</div><div class="skill-tags"><span class="skill-tag">React.js</span><span class="skill-tag">Angular.js</span><span class="skill-tag">Vue.js</span><span class="skill-tag">Tailwind</span><span class="skill-tag">HTML</span><span class="skill-tag">CSS</span><span class="skill-tag">JavaScript</span><span class="skill-tag">TypeScript</span></div></div>
+    <div class="skill-group"><div class="skill-group-title">Backend</div><div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">Django</span><span class="skill-tag">DRF</span><span class="skill-tag">FastAPI</span><span class="skill-tag">Node.js</span><span class="skill-tag">GraphQL</span><span class="skill-tag">Microservices</span><span class="skill-tag">Celery</span></div></div>
+    <div class="skill-group"><div class="skill-group-title">Databases</div><div class="skill-tags"><span class="skill-tag">PostgreSQL</span><span class="skill-tag">MySQL</span><span class="skill-tag">MongoDB</span><span class="skill-tag">Redis</span><span class="skill-tag">Pinecone</span></div></div>
+    <div class="skill-group"><div class="skill-group-title">DevOps &amp; Tools</div><div class="skill-tags"><span class="skill-tag">Docker</span><span class="skill-tag">AWS</span><span class="skill-tag">Kafka</span><span class="skill-tag">RabbitMQ</span><span class="skill-tag">Jenkins</span><span class="skill-tag">CI/CD</span><span class="skill-tag">Git</span><span class="skill-tag">Linux</span><span class="skill-tag">Postman</span></div></div>
+    <div class="skill-group"><div class="skill-group-title">Languages</div><div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">JavaScript</span><span class="skill-tag">TypeScript</span><span class="skill-tag">C++</span><span class="skill-tag">C</span><span class="skill-tag">Golang ↗</span></div></div>
+    <div class="skill-group"><div class="skill-group-title">Data</div><div class="skill-tags"><span class="skill-tag">Pandas</span><span class="skill-tag">NumPy</span><span class="skill-tag">Plotly</span></div></div>
   </div>
 </section>
 
@@ -268,11 +320,11 @@
   <div class="section-label">// 04 — Projects</div>
   <h2>What I've<br>Built</h2>
   <div class="projects-grid reveal">
-    <div class="project-card"><div class="project-num">01</div><div class="project-name">Goal Crew</div><p class="project-desc">Built an accountability platform that helps users form goal-focused pods, track daily progress and streaks, share reflections, and stay consistent through reminders and peer engagement.</p><span class="project-lang">Python</span> <span class="project-lang">TypeScript</span><br><a href="https://github.com/tripathiashwani/GoalCrew" class="project-link" target="_blank">View on GitHub</a> <a href="https://goal-crew-frontend.vercel.app" class="project-link" target="_blank">Go Live</a></div>
-    <div class="project-card"><div class="project-num">03</div><div class="project-name">Advanced Legal Ease</div><p class="project-desc">A Python-powered project aimed at simplifying legal workflows and document processing with intelligent tooling.</p><span class="project-lang">Python</span><br><a href="https://github.com/tripathiashwani/advanced_legal_ease" class="project-link" target="_blank">View on GitHub</a></div>
-    <div class="project-card"><div class="project-num">01</div><div class="project-name">UniVerse</div><p class="project-desc">A full-featured social media application built with Django, Vue.js, and Tailwind CSS. Users can connect, post, and interact in real time.</p><span class="project-lang">Python</span><br><a href="https://github.com/tripathiashwani/UniVerse" class="project-link" target="_blank">View on GitHub</a></div>
-    <div class="project-card"><div class="project-num">02</div><div class="project-name">Real-Time Voice Chat</div><p class="project-desc">A voice chatbot with interruption support, enabling natural back-and-forth conversations in real time using modern web technologies.</p><span class="project-lang">JavaScript</span><br><a href="https://github.com/tripathiashwani/real-time-voice-chat" class="project-link" target="_blank">View on GitHub</a></div>
-    <div class="project-card"><div class="project-num">04</div><div class="project-name">Muta Engine</div><p class="project-desc">A Python-based engine project demonstrating backend architecture skills and systems design principles.</p><span class="project-lang">Python</span><br><a href="https://github.com/tripathiashwani/mutaengine" class="project-link" target="_blank">View on GitHub</a></div>
+    <div class="project-card"><div class="project-num">01</div><div class="project-name">Goal Crew</div><p class="project-desc">Built an accountability platform that helps users form goal-focused pods, track daily progress and streaks, share reflections, and stay consistent through reminders and peer engagement. Includes a RAG-powered reflection chatbot and AI image moderation.</p><span class="project-lang">Python</span> <span class="project-lang">TypeScript</span><br><a href="https://github.com/tripathiashwani/GoalCrew" class="project-link" target="_blank">View on GitHub</a> <a href="https://goal-crew-frontend.vercel.app" class="project-link" target="_blank">Go Live</a></div>
+    <div class="project-card"><div class="project-num">02</div><div class="project-name">Advanced Legal Ease</div><p class="project-desc">A Python-powered project aimed at simplifying legal workflows and document processing with intelligent tooling.</p><span class="project-lang">Python</span><br><a href="https://github.com/tripathiashwani/advanced_legal_ease" class="project-link" target="_blank">View on GitHub</a></div>
+    <div class="project-card"><div class="project-num">03</div><div class="project-name">UniVerse</div><p class="project-desc">A full-featured social media application built with Django, Vue.js, and Tailwind CSS. Users can connect, post, and interact in real time.</p><span class="project-lang">Python</span><br><a href="https://github.com/tripathiashwani/UniVerse" class="project-link" target="_blank">View on GitHub</a></div>
+    <div class="project-card"><div class="project-num">04</div><div class="project-name">Real-Time Voice Chat</div><p class="project-desc">A voice chatbot with interruption support, enabling natural back-and-forth conversations in real time using modern web technologies.</p><span class="project-lang">JavaScript</span><br><a href="https://github.com/tripathiashwani/real-time-voice-chat" class="project-link" target="_blank">View on GitHub</a></div>
+    <div class="project-card"><div class="project-num">05</div><div class="project-name">Muta Engine</div><p class="project-desc">A Python-based engine project demonstrating backend architecture skills and systems design principles.</p><span class="project-lang">Python</span><br><a href="https://github.com/tripathiashwani/mutaengine" class="project-link" target="_blank">View on GitHub</a></div>
     <div class="project-card"><div class="project-num">06</div><div class="project-name">More on GitHub</div><p class="project-desc">60+ repositories spanning web apps, API services, experiments, and open source contributions. Always building something new.</p><span class="project-lang">Various</span><br><a href="https://github.com/tripathiashwani" class="project-link" target="_blank">github.com/tripathiashwani</a></div>
   </div>
 </section>
@@ -383,6 +435,8 @@
     <a href="https://github.com/tripathiashwani" class="social-link" target="_blank">GitHub ↗</a>
     <a href="https://www.linkedin.com/in/ashwani-tripathi01/" class="social-link" target="_blank">LinkedIn ↗</a>
     <a href="https://leetcode.com/u/tripathi_ashwani/" class="social-link" target="_blank">LeetCode ↗</a>
+    <a href="https://codeforces.com/profile/ashwani_tripathi" class="social-link" target="_blank">Codeforces ↗</a>
+    <a href="https://www.codechef.com/users/tashwani475" class="social-link" target="_blank">CodeChef ↗</a>
     <a href="https://www.geeksforgeeks.org/profile/tashwani475" class="social-link" target="_blank">GFG ↗</a>
     <a href="mailto:tashwani475@gmail.com" class="social-link">Email ↗</a>
   </div>
@@ -390,7 +444,7 @@
 
 <footer>
   <span>© 2026 Ashwani Tripathi</span>
-  <span>SDE-I · India · Available for Opportunities</span>
+  <span>Software Engineer · India · Available for Opportunities</span>
 </footer>
 
 <script>
@@ -411,11 +465,9 @@
   function triggerDSA() {
     if (dsaTriggered) return;
     dsaTriggered = true;
-    // Animate bars with stagger
     document.querySelectorAll('.diff-fill').forEach((bar, i) => {
       setTimeout(() => { bar.style.width = bar.dataset.w + '%'; }, i * 130);
     });
-    // Count-up animations
     countUp('lc-count', 1200, '#FFA116');
     countUp('gfg-count', 400, '#2F8D46');
   }
